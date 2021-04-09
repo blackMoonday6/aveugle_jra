@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4d913165-33dd-481e-9541-42113d25c5e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/PyTorch-YOLOv3-master.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MaterialDetector/classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../MaterialDetector/classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewAPP/.idea/NewAPP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewAPP/.idea/NewAPP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewAPP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewAPP/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewAPP/App.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewAPP/App.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewAPP/bbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewAPP/bbox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewAPP/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewAPP/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewAPP/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewAPP/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NewAPP/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewAPP/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../proj/datasetBuilder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../proj/datasetBuilder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weights/download_weights.sh" beforeDir="false" afterPath="$PROJECT_DIR$/weights/download_weights.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1f5MPcLRTlQp4hh9EjuNTmpebJS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/detect.py" />
+  </component>
+  <component name="RunManager">
+    <configuration name="detect" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PyTorch-YOLOv3-master" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/detect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d913165-33dd-481e-9541-42113d25c5e9" name="Default Changelist" comment="" />
+      <created>1595503476353</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595503476353</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="450" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595512569819">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="450" y="266" key="#com.intellij.execution.impl.EditConfigurationsDialog/65.24.1855.1056@65.24.1855.1056" timestamp="1595512569819" />
+    <state x="775" y="394" width="424" height="454" key="FileChooserDialogImpl" timestamp="1595512568206">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state x="775" y="394" width="424" height="454" key="FileChooserDialogImpl/65.24.1855.1056@65.24.1855.1056" timestamp="1595512568206" />
+    <state width="1832" height="289" key="GridCell.Tab.0.bottom" timestamp="1595588894829">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="289" key="GridCell.Tab.0.bottom/65.24.1855.1056@65.24.1855.1056" timestamp="1595588894829" />
+    <state width="1832" height="289" key="GridCell.Tab.0.center" timestamp="1595588894822">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="289" key="GridCell.Tab.0.center/65.24.1855.1056@65.24.1855.1056" timestamp="1595588894822" />
+    <state width="1832" height="289" key="GridCell.Tab.0.left" timestamp="1595588894814">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="289" key="GridCell.Tab.0.left/65.24.1855.1056@65.24.1855.1056" timestamp="1595588894814" />
+    <state width="1832" height="289" key="GridCell.Tab.0.right" timestamp="1595588894822">
+      <screen x="65" y="24" width="1855" height="1056" />
+    </state>
+    <state width="1832" height="289" key="GridCell.Tab.0.right/65.24.1855.1056@65.24.1855.1056" timestamp="1595588894822" />
+  </component>
+</project>
