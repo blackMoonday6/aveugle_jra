@@ -10,7 +10,8 @@ int ag=5;//mouteur avant gauche
 long lecture_echo;
 long cm;
 int  vitesse;
-int maxvitess;
+int maxvitesse;
+int index;
 void setup()
 {
  Serial.begin(9600);
