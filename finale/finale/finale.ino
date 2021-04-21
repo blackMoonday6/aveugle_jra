@@ -36,7 +36,9 @@ void loop()
     digitalWrite(trig, LOW);
     lecture_echo = pulseIn(echo,HIGH);
     cm = lecture_echo /58;
-
+    
+    vitesse=map(cm,30,150,225,45);
+    
 if(Serial.available()>0)
 {
   reciveur=Serial.readStringUntil('\n');
@@ -53,10 +55,10 @@ if(Serial.available()>0)
  index = reciveur.indexOf(',');
  reciveur2=reciveur.substring(0,index);
   positionn=reciveur2.toInt();*/
-if(cm<60){
+if(cm<150){
   if((positionn>270)&&(positionn<295)){  /*Milieu*/
-    analogWrite(ad,60);
-    analogWrite(ag,60);
+    analogWrite(ad,vitesse);
+    analogWrite(ag,vitesse);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN, HIGH);
@@ -65,15 +67,15 @@ if(cm<60){
   }
     
   if((positionn>220)&&(positionn<271)){ /*Droite*/
-    analogWrite(ad,70);
-    analogWrite(ag,50);
+    analogWrite(ad,vitesse);
+    analogWrite(ag,vitesse*0.7);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
     
   if((positionn>294)&&(positionn<370)){ /*Gauche*/
-    analogWrite(ad,50);
-    analogWrite(ag,70);
+    analogWrite(ad,vitesse*0.7);
+    analogWrite(ag,vitesse);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
