@@ -40,7 +40,10 @@ void loop()
     if((cm>74)||(cm==0))
     {vitesse =0;}
     else{
-    vitesse=map(cm,75,120,75,0);}
+    vitesse=map(cm,75,120,75,0);
+    Tasli7aDG=map(positionn,220,271,0.7,1);
+    Tasli7aGG=map(positionn,294,370,1,1.2);}
+    //Serial.println(cm);
     
 if(Serial.available()>0)
 {
@@ -71,14 +74,14 @@ if(cm<75){
     
   if((positionn>220)&&(positionn<271)){ /*Droite*/
     analogWrite(ad,vitesse);
-    analogWrite(ag,vitesse*0.7);//position/314
+    analogWrite(ag,vitesse*Tasli7aDG);//position/314::Tasli7aDG=map(cm,220,271,0.7,1);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
     
   if((positionn>294)&&(positionn<370)){ /*Gauche*/
-    analogWrite(ad,vitesse*0.6);
-    analogWrite(ag,vitesse*1.2);
+    analogWrite(ad,vitesse*Tasli7aGG*0.2);
+    analogWrite(ag,vitesse*Tasli7aGG);//Tasli7aGG=map(cm,220,271,0.7,1);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
@@ -100,7 +103,7 @@ if(cm<75){
   digitalWrite(LED_BUILTIN,LOW);}
   if ((positionn<221))/*barcha Droite*/
   {
-  analogWrite(ad,vitesse*1.2);
+    analogWrite(ad,vitesse*1.2);
     analogWrite(ag,vitesse*0.6);
     analogWrite(bg,0);
     analogWrite(ag,0);
