@@ -19,7 +19,7 @@ int index;
 int see;
 void setup()
 {
- Serial.begin(9600);
+ Serial.begin(115200);
  pinMode(trig, OUTPUT);
 digitalWrite(trig, LOW);
 pinMode(ad,OUTPUT);
@@ -36,13 +36,12 @@ void loop()
     digitalWrite(trig, LOW);
     lecture_echo = pulseIn(echo,HIGH);
     cm = lecture_echo /58;
-    
-    vitesse=map(cm,30,150,225,45);
-    
+
 if(Serial.available()>0)
 {
   reciveur=Serial.readStringUntil('\n');
-  positionn=reciveur.toInt();}
+  positionn=reciveur.toInt();
+}
 /*reciveur2=reciveur.substring(0,index);
   angle=reciveur2.toInt();
   reciveur2=reciveur.substring(index+1);
@@ -55,60 +54,37 @@ if(Serial.available()>0)
  index = reciveur.indexOf(',');
  reciveur2=reciveur.substring(0,index);
   positionn=reciveur2.toInt();*/
-if(cm<150){
+
   if((positionn>270)&&(positionn<295)){  /*Milieu*/
-    analogWrite(ad,vitesse);
-    analogWrite(ag,vitesse);
+    digitalWrite(ad,70);
+    digitalWrite(ag,70);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN, HIGH);
-    
   
   }
     
   if((positionn>220)&&(positionn<271)){ /*Droite*/
-    analogWrite(ad,vitesse);
-    analogWrite(ag,vitesse*0.7);
+    analogWrite(ad,100);
+    analogWrite(ag,50);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
     
   if((positionn>294)&&(positionn<370)){ /*Gauche*/
-    analogWrite(ad,vitesse*0.7);
-    analogWrite(ag,vitesse);
+    analogWrite(ad,50);
+    analogWrite(ag,100);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
- /* 
-  if ((positionn>370)||(positionn<294))
+  
+  else
   {
   analogWrite(ad,0);
     analogWrite(bd,0);
     analogWrite(bg,0);
-    analogWrite(ag,0);
-    Serial.println(positionn);
-  digitalWrite(LED_BUILTIN,LOW);}*/
-  if ((positionn>370))
-  {
-  analogWrite(ad,0);
-    analogWrite(bd,0);
-    analogWrite(bg,0);
-    analogWrite(ag,0);
-  digitalWrite(LED_BUILTIN,LOW);}
-  if ((positionn<220))
-  {
-  analogWrite(ad,0);
-    analogWrite(bd,0);
-    analogWrite(bg,0);
-    analogWrite(ag,0);
-  digitalWrite(LED_BUILTIN,LOW);}
-}
-else{analogWrite(ad,0);
-    analogWrite(bd,0);
-    analogWrite(bg,0);
-    analogWrite(ag,0);
-  digitalWrite(LED_BUILTIN,LOW);
-}
+    analogWrite(ag,0);}
+
 
 
 } 
