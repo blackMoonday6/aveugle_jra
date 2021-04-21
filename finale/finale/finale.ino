@@ -36,8 +36,11 @@ void loop()
     digitalWrite(trig, LOW);
     lecture_echo = pulseIn(echo,HIGH);
     cm = lecture_echo /58;
-    
-    vitesse=map(cm,30,150,225,45);
+    delay(50);
+    if((cm>74)||(cm==0))
+    {vitesse =0;}
+    else{
+    vitesse=map(cm,75,120,75,0);}
     
 if(Serial.available()>0)
 {
@@ -55,7 +58,7 @@ if(Serial.available()>0)
  index = reciveur.indexOf(',');
  reciveur2=reciveur.substring(0,index);
   positionn=reciveur2.toInt();*/
-if(cm<150){
+if(cm<75){
   if((positionn>270)&&(positionn<295)){  /*Milieu*/
     analogWrite(ad,vitesse);
     analogWrite(ag,vitesse);
@@ -68,14 +71,14 @@ if(cm<150){
     
   if((positionn>220)&&(positionn<271)){ /*Droite*/
     analogWrite(ad,vitesse);
-    analogWrite(ag,vitesse*0.7);
+    analogWrite(ag,vitesse*0.7);//position/314
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
     
   if((positionn>294)&&(positionn<370)){ /*Gauche*/
-    analogWrite(ad,vitesse*0.7);
-    analogWrite(ag,vitesse);
+    analogWrite(ad,vitesse*0.6);
+    analogWrite(ag,vitesse*1.2);
     analogWrite(bd,0);
     analogWrite(bg,0);
     digitalWrite(LED_BUILTIN,LOW);}
@@ -88,17 +91,17 @@ if(cm<150){
     analogWrite(ag,0);
     Serial.println(positionn);
   digitalWrite(LED_BUILTIN,LOW);}*/
-  if ((positionn>370))
+  if ((positionn>369))/*barcha Gauche*/
   {
-  analogWrite(ad,0);
-    analogWrite(bd,0);
+    analogWrite(ad,vitesse*0.4);
+    analogWrite(ag,vitesse*1.3);
     analogWrite(bg,0);
-    analogWrite(ag,0);
-  digitalWrite(LED_BUILTIN,LOW);}
-  if ((positionn<220))
-  {
-  analogWrite(ad,0);
     analogWrite(bd,0);
+  digitalWrite(LED_BUILTIN,LOW);}
+  if ((positionn<221))/*barcha Droite*/
+  {
+  analogWrite(ad,vitesse*1.2);
+    analogWrite(ag,vitesse*0.6);
     analogWrite(bg,0);
     analogWrite(ag,0);
   digitalWrite(LED_BUILTIN,LOW);}
